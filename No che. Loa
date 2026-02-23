@@ -1,0 +1,16 @@
+-- MENU SCRIPT PRO (Delta Android)
+
+local player = game.Plers.LocalPlayer
+local char = player.Character or player.CharacterAdded:Wait()
+local hum = char:WaitForChild("Humanoid")
+
+-- SPEED
+hum.WalkSpeed = 40
+
+-- JUMP
+hum.JumpPower = 100
+
+-- FLY (presiona E para volar)
+local flying = false
+game:GetService("UserInputService").InputBegan:Connect(function(input)
+	if input.KeyCode == Enum.KeyCode.E then
